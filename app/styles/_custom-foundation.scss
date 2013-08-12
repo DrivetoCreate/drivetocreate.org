@@ -1,5 +1,13 @@
 @import "../bower_components/foundation/scss/foundation/_variables";
 // Variable overrides
+$small-screen: 768px;
+$medium-screen: 1280px;
+$large-screen: 1440px;
+
+$screen: "only screen";
+$small: "only screen and (min-width: #{$small-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$large: "only screen and (min-width: #{$large-screen})";
 
 @import
 	"../bower_components/foundation/scss/foundation/components/global",
@@ -8,4 +16,9 @@
 	"../bower_components/foundation/scss/foundation/components/block-grid",
 	"../bower_components/foundation/scss/foundation/components/type",
 	"../bower_components/foundation/scss/foundation/components/section",
+	"../bower_components/foundation/scss/foundation/components/flex-video",
 	"../bower_components/foundation/scss/foundation/components/top-bar";
+
+.row {
+	max-width: 96%;
+}
