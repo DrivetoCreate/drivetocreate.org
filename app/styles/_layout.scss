@@ -1,4 +1,8 @@
-section.full-width {
+p {
+	max-width: 60em;
+}
+
+section.full-width, footer.full-width {
 	&.bg-image {
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -21,6 +25,9 @@ section.full-width {
 	background-position: left top;
 	@include retina('/images/home_banner@2x.jpg');
 	height: 10em;
+	.row {
+		position: relative;
+	}
 	@media screen and (min-width: 460px) {
 		height: 13em;
 	}
@@ -74,12 +81,57 @@ section.full-width {
 	// 	min-height: 23em;
 	// }
 	.callout {
-		background-color: $blue;
+		@include callout($blue, white);
+	}
+	
+}
+
+footer.full-width {
+	background-color: $brown;
+	color: $light-brown;
+	ul, nav, div {
+		margin-bottom: 1em;
+	}
+	nav {
+		margin-top: 1em;
+	}
+	a.nav-item {
+		color: $light-brown;
+		text-decoration: none;
+		margin-top: 0.2em;
+		width: 100%;
+		display: inline-block;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	input {
 		border-radius: $border-radius;
-		margin: 3em auto;
-		h2 {
-			color: white;
-			font-size: 1.5em;
+	}
+	ul {
+		list-style: none;
+		li {
+			display: inline;
+			float: left;
+			width: 33%;
+			text-align: center;
+			font-size: 4em;
+			i {
+				color: $magenta;
+			}
+			@media #{$small} {
+				font-size: 2em;
+				text-align: left;
+				width: auto;
+			}
+
+		}
+	}
+	#mc-embedded-subscribe {
+		background-color: $magenta;
+		color: white;
+		&:hover {
+			background-color: $magenta;
 		}
 	}
 }

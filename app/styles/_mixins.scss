@@ -11,3 +11,30 @@
 }
 
 $border-radius: 10px;
+
+@mixin callout($bg-color, $text-color) {
+	background-color: $bg-color;
+	border-radius: $border-radius;
+	margin: 3em auto;
+	@include clearfix();
+	h2, p {
+		color: $text-color;
+	}
+}
+
+@mixin ease($property) {
+	-webkit-transition: #{$property} 1s ease-in-out;
+	-moz-transition: #{$property} 1s ease-in-out;
+	transition: #{$property} 1s ease-in-out;
+}
+
+@mixin btn($color, $bg-color) {
+	background-color: $bg-color;
+	color: $color;
+	border-radius: $border-radius;
+	border-style: none;
+	text-align: center;
+	padding: 0.5em 0.75em;
+	font-size: 2em;
+	@include openSans;
+}

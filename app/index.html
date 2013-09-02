@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Glegoo|Open+Sans:300,800' rel='stylesheet' type='text/css'>
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <!-- build:css({.tmp,app}) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -22,20 +22,20 @@
         <section class="full-width hp-header">
             <div class="row">
                 <nav class="top-nav">
-                    <span class="logo"></span>
+                    <a href="/" title="Home"><span class="logo"></span></a>
                     <ul>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="/lend-a-hand/" title="Lend a Hand">lend a hand</a>
                         </li>
                         <li class="nav-item">
                             <a href="/about/" title="About">about</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a href="/application/" title="Non-profit Application">non-profit application</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="/get-educated/" title="Get Educated">get educated</a>
-                        </li>
+                        </li>-->
                         <li class="nav-item">
                             <a href="/donate/" title="Donate">donate</a>
                         </li>
@@ -49,13 +49,19 @@
         <section class="full-width bg-image hp-banner">
             <div class="row">
                 <button class="play-button"><span class="arrow"></span></button>
+                <div class="dark-overlay hidden">
+                    <a href="#" class="close-overlay" title="Close">Close</a>
+                </div>
+                <div class="video-embed hidden small-10 small-centered large-7 columns flex-video vimeo">
+                    <!-- Vimeo embed code gets inserted here, as recommended at https://developer.vimeo.com/player/embedding -->
+                </div>
             </div>
         </section>
 
         <section class="full-width hp-donated">
             <div class="row">
                 <h2><span class="big-number" id="hp-dollars-donated">$100,000+</span> in creative services donated to date.</h2>
-                <p>Hashtag cornhole craft beer Echo Park, four loko Cosby sweater artisan tousled freegan occupy Tonx art party letterpress. Banh mi Etsy gentrify bitters 3 wolf moon biodiesel pour-over, gastropub whatever tumblr blue bottle plaid Brooklyn McSweeney's. Odd Future banh mi tofu bicycle rights, twee fashion axe kale chips deep v chambray butcher mlkshk.</p>
+                <p>We transform the time, experience and creativity from our dedicated volunteers into real deliverables for non-profits. We work on-site with each non-profit for a full (10-12 hour) marathon work day. When we leave, they get everything our team created. FO FREE.</p>
             </div>
         </section>
 
@@ -63,20 +69,43 @@
             <div class="row">
                 <div class="small-11 small-centered large-7 large-offset-5 columns callout">
                     <h2>We're inspiring a movement</h2>
-                    <p>American apparel artisan leggings, fanny pack Etsy tumblr occupy organic trust fund Terry Richardson skateboard. Photo booth messenger bag wayfarers before they sold out, Wes Anderson gastropub plaid banh mi tote bag.</p>
+                    <p>It’s a group effort. Much like the non-profits we serve, we donate our talents to make a greater impact. Join the movement. Let’s make an impact together.</p>
                 </div>
             </div>
         </section>
 
         <section class="full-width bg-image hp-driver">
-            <div class="row">
-                <div class="small-10 small-centered columns callout">
-                    <h2>Believe in us, so we can continue believing in others.</h2>
-                    <p>Keytar pop-up Banksy sriracha fixie cray, kale chips freegan. Master cleanse street art literally sriracha semiotics, pork belly pitchfork photo booth umami readymade polaroid wayfarers kogi art party you probably haven't heard of them.</p>
-                    <button class="donate">Donate</button>
+            <div class="small-10 small-centered large-8 columns callout">
+                <div class="small-12 large-7 columns">
+                    <h2>Fuel the Drive</h2>
+                    <p>Be the momentum and help us fuel the drive. Whether volunteering or donating to our cause, your generosity helps us energize non-profits so they can continue giving hope to those they help.</p>
                 </div>
+                <a href="/donate" title="Donate" class="donate-cta">Donate</a>
             </div>
         </section>
+
+        <footer class="full-width">
+            <div class="row">
+                <ul class="social-icons small-12 large-1 columns">
+                    <li><a href="https://www.twitter.com/drivetocreate" title="Drive to Create on Twitter"><i class="icon-twitter"></i></li>
+                    <li><a href="https://www.facebook.com/drivetocreate" title="Drive to Create on Facebook"><i class="icon-facebook"></i></li>
+                    <li><a href="mailto:info@drivetocreate.org" title="Email Drive to Create"><i class="icon-mail"></i></li>
+                </ul>
+                <nav class="small-12 large-6 columns">
+                    <a href="/application/" class="nav-item" title="Apply for Assistance">Non-profit Application</a>
+                    <a href="/donate/" class="nav-item" title="Donate">Donate</a>
+                </nav>
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup" class="small-12 large-4 columns">
+                    <form action="http://drivetocreate.us4.list-manage.com/subscribe/post?u=0d412f8c6d378ed00b7374fe9&id=c9fb2213e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <label for="mce-EMAIL">Receive our Newsletter</label>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        <small>We only email you with big news. Never to beg.</small>
+                    </form>
+                </div>
+            </div>
+        </footer>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
