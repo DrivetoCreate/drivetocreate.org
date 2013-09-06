@@ -6,16 +6,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Drive to Create</title>
+        <title>Non-profit Application | Drive to Create</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Glegoo|Open+Sans:300,800' rel='stylesheet' type='text/css'>
         <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="/styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="/bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
@@ -30,7 +30,7 @@
                         <li class="nav-item">
                             <a href="/about/" title="About">about</a>
                         </li> -->
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a href="/application/" title="Non-profit Application">non-profit application</a>
                         </li>
                         <!-- <li class="nav-item">
@@ -41,48 +41,21 @@
                         </li>
                     </ul>
                 </nav>
-                
-                <h1 class="small-12 columns hp-header">We invest our time &amp; creativity in non-profits that have the potential to make a huge impact in society.</h1>
             </div>
         </section>
 
-        <section class="full-width bg-image hp-banner">
-            <div class="row">
-                <button class="play-button"><span class="arrow"></span></button>
-                <div class="dark-overlay hidden">
-                    <a href="#" class="js-close close-prompt" title="Close">&times;</a>
-                </div>
-                <div class="video-embed hidden small-10 small-centered large-7 columns flex-video vimeo">
-                    <!-- Vimeo embed code gets inserted here, as recommended at https://developer.vimeo.com/player/embedding -->
-                </div>
+        <section class="full-width npa-content row">
+            <div class="small-12 large-7 columns npa main-column">
+                <h1>The Process</h1>
+                <p>You’ve already started the movement. We help drive home results. Tell us your story and let’s find ways to fuel your mission.</p>
+            </div>
+
+            <div class="small-12 large-5 columns npa side-column">
+                <h2>The Application</h2>
             </div>
         </section>
 
-        <section class="full-width hp-donated">
-            <div class="row">
-                <h2><span class="big-number" id="hp-dollars-donated">$100,000+</span> in creative services donated to date.</h2>
-                <p>We transform the time, experience and creativity from our dedicated volunteers into real deliverables for non-profits. We work on-site with each non-profit for a full (10-12 hour) marathon work day. When we leave, they get everything our team created. FO FREE.</p>
-            </div>
-        </section>
-
-        <section class="full-width bg-image hp-movement">
-            <div class="row">
-                <div class="small-11 small-centered large-7 large-offset-5 columns callout">
-                    <h2>We're inspiring a movement</h2>
-                    <p>It’s a group effort. Much like the non-profits we serve, we donate our talents to make a greater impact. Join the movement. Let’s make an impact together.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="full-width bg-image hp-driver">
-            <div class="small-10 small-centered large-8 columns callout">
-                <div class="small-12 large-7 columns">
-                    <h2>Fuel the Drive</h2>
-                    <p>Be the momentum and help us fuel the drive. Whether volunteering or donating to our cause, your generosity helps us energize non-profits so they can continue giving hope to those they help.</p>
-                </div>
-                <a href="/donate" title="Donate" class="donate-cta">Donate</a>
-            </div>
-        </section>
+        
 
         <footer class="full-width">
             <div class="row">
@@ -107,10 +80,6 @@
             </div>
         </footer>
 
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -120,25 +89,11 @@
         </script>
 
         <!-- build:js scripts/main.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-        <script src="bower_components/fittext/fittext.js"></script>
-        <script src="scripts/main.js"></script>
+        <script src="/bower_components/jquery/jquery.js"></script>
+        <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
+        <script src="/bower_components/fittext/fittext.js"></script>
+        <script src="/scripts/main.js"></script>
         <!-- endbuild -->
-
-        <script type="text/javascript">
-            fitText(document.getElementById('hp-dollars-donated'), 0.72);
-
-            var vimeoVideoId = '50959272';
-            var vimeoPlayer = '<iframe src="http://player.vimeo.com/video/' + vimeoVideoId + '" frameborder="0" class="vimeo-video" autoplay webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
-
-            $('dark-overlay, .play-button, .js-close, .video-embed').on('click', function (event) {
-                event.preventDefault();
-                $('.video-embed').html($(vimeoPlayer));
-                $('.dark-overlay').fadeToggle(500);
-                $('.video-embed').fadeToggle(500);
-            });
-        </script>
 
 </body>
 </html>

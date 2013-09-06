@@ -44,20 +44,26 @@ h1.hp-header {
 		font-size: 0.9em;
 		@include glegoo;
 	}
+	&.active {
+		a {
+			color: white;
+		}
+	}
 }
 
 .play-button {
-	width: 4em;
-	height: 4em;
-	border-radius: 2em;
+	$size: 4em;
+	width: $size;
+	height: $size;
+	border-radius: #{$size / 2};
 	border-style: none;
 	background-color: $teal;
 	display: block;
 	position: absolute;
 	left: 48%;
-	left: -webkit-calc(50% - 2em);
-	left: -moz-calc(50% - 2em);
-	left: calc(50% - 2em);
+	left: -webkit-calc(50% - #{$size / 2});
+	left: -moz-calc(50% - #{$size / 2});
+	left: calc(50% - #{$size / 2});
 	top: 3em;
 	@media screen and (min-width: 460px) {
 		top: 4.5em;
@@ -77,6 +83,16 @@ h1.hp-header {
 		position: absolute;
 		left: 1.7em;
 		top: 1em;
+	}
+}
+
+.close-prompt {
+	color: white;
+	font-weight: bold;
+	font-size: 3em;
+	float: right;
+	&:hover {
+		color: gray;
 	}
 }
 

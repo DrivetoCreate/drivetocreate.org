@@ -91,6 +91,7 @@ section.full-width, footer.full-width {
 footer.full-width {
 	background-color: $brown;
 	color: $light-brown;
+	@include clearfix();
 	ul, nav, div {
 		margin-bottom: 1em;
 	}
@@ -135,5 +136,30 @@ footer.full-width {
 		&:hover {
 			background-color: $magenta;
 		}
+	}
+}
+
+.npa-content {
+	@include fauxColumns(white, $teal, 0.58432934926959%);
+}
+
+.npa.main-column {
+	background-color: white;
+	color: $brown;
+	h1, h2, h3, h4, h5, h6 {
+		color: $teal;
+	}
+}
+
+.npa.side-column {
+	background-color: $teal;
+	color: $brown;
+}
+
+.close-prompt {
+	display: none;
+	padding: 10px 20px;
+	@media #{$small} {
+		display: inline-block;
 	}
 }
