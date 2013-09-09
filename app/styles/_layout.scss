@@ -8,6 +8,7 @@ section.full-width, footer.full-width {
 		background-repeat: no-repeat;
 	}
 	width: 100%;
+    max-width: 100%;
 	@include clearfix();
 	.content {
 		display: block;
@@ -85,7 +86,7 @@ section.full-width, footer.full-width {
 	.callout {
 		@include callout($blue, white);
 	}
-	
+
 }
 
 footer.full-width {
@@ -127,33 +128,56 @@ footer.full-width {
 				text-align: left;
 				width: auto;
 			}
-
 		}
 	}
+    #mc_embed_signup {
+        input[type=text], input[type=email] textarea {
+            outline: none;
+            border: none;
+
+        }
+        input[type=text]:focus, input[type=email]:focus, textarea:focus {
+            -webkit-box-shadow: 0 0 5px white;
+            -moz-box-shadow: 0 0 5px white;
+            box-shadow: 0 0 5px white;
+            border: 1px solid white;
+            outline: none;
+        }
+    }
 	#mc-embedded-subscribe {
 		background-color: $magenta;
 		color: white;
 		&:hover {
 			background-color: $magenta;
 		}
+
 	}
 }
 
 .npa-content {
-	@include fauxColumns(white, $teal, 0.58432934926959%);
+	@media #{$small} {
+        @include fauxColumns(white, $teal, 58.432934926959%);
+    }
 }
 
 .npa.main-column {
 	background-color: white;
 	color: $brown;
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h4, h5, h6 {
 		color: $teal;
 	}
+    @media #{$small} {
+        background-color: transparent;
+    }
 }
 
 .npa.side-column {
-	background-color: $teal;
-	color: $brown;
+    color: $brown;
+    background-color: $teal;
+    margin-bottom: 1em;
+	@media #{$small} {
+        background-color: transparent;
+    }
 }
 
 .close-prompt {

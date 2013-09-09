@@ -41,10 +41,10 @@ $border-radius: 10px;
 
 @mixin fauxColumns($c1, $c2, $percent) {
 	background: $c1; /* Old browsers */
-	background: -moz-linear-gradient(top, $c1 $percent, $c2 $percent); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop($percent,$c1), color-stop($percent,$c2)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, $c1 $percent,$c2 $percent); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, $c1 $percent,$c2 $percent); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, $c1 $percent,$c2 $percent); /* IE10+ */
-	background: linear-gradient(to bottom, $c1 $percent,$c2 $percent); /* W3C */
+	background: -moz-linear-gradient(left, $c1 $percent, $c2 $percent); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop($percent,$c1), color-stop($percent,$c2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, $c1 $percent,$c2 $percent); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, $c1 $percent,$c2 $percent); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, $c1 $percent,$c2 $percent); /* IE10+ */
+	background: linear-gradient(to right, $c1 $percent,$c2 $percent); /* W3C */
 }

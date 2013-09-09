@@ -75,8 +75,8 @@ h1.hp-header {
 		top: 9.5em;
 	}
 	.arrow {
-		width: 0; 
-		height: 0; 
+		width: 0;
+		height: 0;
 		border-top: 1em solid transparent;
 		border-bottom: 1em solid transparent;
 		border-left: 1em solid white;
@@ -166,4 +166,91 @@ h1.hp-header {
 	}
 	//top: 0;
 	//height: 100%;
+}
+
+.orbit-container {
+    max-width: 30em;
+    margin-bottom: 1em;
+    .orbit-next, .orbit-prev {
+        background-color: transparent;
+        span {
+            color: white;
+            border: none;
+        }
+        span:before {
+            @include fontStyles;
+        }
+    }
+    .orbit-next span:before {
+        content: '\e804';
+    }
+    .orbit-prev span:before {
+        content: '\e803';
+    }
+}
+
+.panel {
+    background-color: $brown;
+    color: white;
+    //-webkit-border-radius: $border-radius;
+    //-moz-border-radius: $border-radius;
+    //border-radius: $border-radius;
+    padding: 2.5% 5%;
+    //height: 100%;
+    .header-icon {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 4em;
+    }
+    h3 {
+        color: white;
+    }
+    p {
+
+    }
+    &.overview {
+        background-color: $brown;
+        color: $teal;
+        .big-next {
+            &:before {
+                @include fontStyles;
+                content: '\e804';
+            }
+        }
+    }
+    &.application {
+        background-color: $orange;
+    }
+    &.chat {
+        background-color: $teal;
+    }
+    &.vote {
+        background-color: $magenta;
+    }
+    &.drive-day {
+        background-color: $blue;
+    }
+    &.relationship {
+        background-color: $brown;
+    }
+}
+
+.npa.side-column iframe html {
+    // Note: This is included as Custom CSS on the Podio Webform.
+    // Documented here for reference. This is not applied to the form
+    // through this stylesheet.
+    body {
+        background-color: #69c9ca; // teal
+        color: #3D2313; // brown
+    }
+    input {
+        border: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    label, .label, input {
+        color: #3D2313;
+    }
 }

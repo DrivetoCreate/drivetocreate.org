@@ -37,11 +37,11 @@
                             <a href="/get-educated/" title="Get Educated">get educated</a>
                         </li>-->
                         <li class="nav-item">
-                            <a href="/donate/" title="Donate">donate</a>
+                            <a href="http://fundly.com/fuel-the-drive" title="Donate">donate</a>
                         </li>
                     </ul>
                 </nav>
-                
+
                 <h1 class="small-12 columns hp-header">We invest our time &amp; creativity in non-profits that have the potential to make a huge impact in society.</h1>
             </div>
         </section>
@@ -80,7 +80,7 @@
                     <h2>Fuel the Drive</h2>
                     <p>Be the momentum and help us fuel the drive. Whether volunteering or donating to our cause, your generosity helps us energize non-profits so they can continue giving hope to those they help.</p>
                 </div>
-                <a href="/donate" title="Donate" class="donate-cta">Donate</a>
+                <a href="http://fundly.com/fuel-the-drive" title="Donate" class="donate-cta">Donate</a>
             </div>
         </section>
 
@@ -93,7 +93,7 @@
                 </ul>
                 <nav class="small-12 large-6 columns">
                     <a href="/application/" class="nav-item" title="Apply for Assistance">Non-profit Application</a>
-                    <a href="/donate/" class="nav-item" title="Donate">Donate</a>
+                    <a href="http://fundly.com/fuel-the-drive" class="nav-item" title="Donate">Donate</a>
                 </nav>
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup" class="small-12 large-4 columns">
@@ -119,14 +119,23 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <!-- build:js scripts/main.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-        <script src="bower_components/fittext/fittext.js"></script>
-        <script src="scripts/main.js"></script>
+        <!-- build:js scripts/jquery.js -->
+        <script src="/bower_components/jquery/jquery.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/foundation.js -->
+        <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/fittext.js -->
+        <script src="/bower_components/fittext/fittext.js"></script>
         <!-- endbuild -->
 
         <script type="text/javascript">
+            'use strict';
+
+            $(document).foundation();
+
             fitText(document.getElementById('hp-dollars-donated'), 0.72);
 
             var vimeoVideoId = '50959272';

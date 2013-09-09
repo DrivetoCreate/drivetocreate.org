@@ -37,7 +37,7 @@
                             <a href="/get-educated/" title="Get Educated">get educated</a>
                         </li>-->
                         <li class="nav-item">
-                            <a href="/donate/" title="Donate">donate</a>
+                            <a href="http://fundly.com/fuel-the-drive" title="Donate">donate</a>
                         </li>
                     </ul>
                 </nav>
@@ -48,14 +48,51 @@
             <div class="small-12 large-7 columns npa main-column">
                 <h1>The Process</h1>
                 <p>You’ve already started the movement. We help drive home results. Tell us your story and let’s find ways to fuel your mission.</p>
+                <ul data-orbit>
+                    <li class="panel overview">
+                        <h2>A Super Quick Overview of Our Process</h2>
+                        <a href="#" class="orbit-next big-next">Next <span></span></a>
+                    </li>
+                    <li class="panel application">
+                        <i class="icon-doc header-icon"></i>
+                        <h3>The Application</h3>
+                        <p>Apply by filling out the form!</p>
+                    </li>
+                    <li class="panel chat">
+                        <i class="icon-phone header-icon"></i>
+                        <h3>Let's Chat</h3>
+                        <p>We'll review your application &amp; set up a call with you if we feel like you're a good fit.</p>
+                    </li>
+                    <li class="panel vote">
+                        <i class="icon-check header-icon"></i>
+                        <h3>We Vote</h3>
+                        <p>The DTC Board then determines how we should proceed. If approved, we then schedule a Drive Day. If we do not approve, you can re-apply in 6 months.</p>
+                    </li>
+                    <li class="panel drive-day">
+                        <i class="icon-briefcase header-icon"></i>
+                        <h3>The Drive Day</h3>
+                        <p>Once it's time for your Drive Day, we arrive bright and early and spend then next 12 hours creating, educating and changing.</p>
+                    </li>
+                    <li class="panel relationship">
+                        <i class="icon-calendar header-icon"></i>
+                        <h3>Let's Chat</h3>
+                        <p>We'll review your application &amp; set up a call with you if we feel like you're a good fit.</p>
+                    </li>
+                </ul>
             </div>
 
             <div class="small-12 large-5 columns npa side-column">
                 <h2>The Application</h2>
+                <!-- BEGIN Podio web form -->
+                <script src="https://podio.com/webforms/2385476/171257.js"></script>
+                <script type="text/javascript">
+                  _podioWebForm.render("171257")
+                </script>
+                <!-- END Podio web form -->
             </div>
         </section>
 
-        
+
 
         <footer class="full-width">
             <div class="row">
@@ -66,7 +103,7 @@
                 </ul>
                 <nav class="small-12 large-6 columns">
                     <a href="/application/" class="nav-item" title="Apply for Assistance">Non-profit Application</a>
-                    <a href="/donate/" class="nav-item" title="Donate">Donate</a>
+                    <a href="http://fundly.com/fuel-the-drive" class="nav-item" title="Donate">Donate</a>
                 </nav>
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup" class="small-12 large-4 columns">
@@ -88,12 +125,30 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <!-- build:js scripts/main.js -->
+        <!-- build:js scripts/jquery.js -->
         <script src="/bower_components/jquery/jquery.js"></script>
-        <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
-        <script src="/bower_components/fittext/fittext.js"></script>
-        <script src="/scripts/main.js"></script>
         <!-- endbuild -->
+
+        <!-- build:js scripts/foundation.js -->
+        <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/foundation.js -->
+        <script src="/bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+        <!-- endbuild -->
+
+        <script type="text/javascript">
+            'use strict';
+
+            $(document).foundation('orbit', {
+                timer: false,
+                bullets: false,
+                slide_number: false,
+                variable_height: true
+            });
+
+        </script>
+
 
 </body>
 </html>
