@@ -174,7 +174,7 @@ footer.full-width {
 .npa.side-column {
     color: $brown;
     background-color: $teal;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
 	@media #{$small} {
         background-color: transparent;
     }

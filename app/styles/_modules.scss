@@ -189,6 +189,18 @@ h1.hp-header {
     }
 }
 
+ul.our-process {
+    list-style: none;
+    li {
+        margin-bottom: 0.5em;
+        font-size: 1.2em;
+        margin-left: 3em;
+        i {
+            margin-left: -1.6em;
+        }
+    }
+}
+
 .panel {
     background-color: $brown;
     color: white;
@@ -236,21 +248,34 @@ h1.hp-header {
     }
 }
 
-.npa.side-column iframe html {
-    // Note: This is included as Custom CSS on the Podio Webform.
-    // Documented here for reference. This is not applied to the form
-    // through this stylesheet.
-    body {
-        background-color: #69c9ca; // teal
-        color: #3D2313; // brown
-    }
-    input {
-        border: none;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-    }
-    label, .label, input {
-        color: #3D2313;
-    }
-}
+// .npa.side-column iframe html {
+//     // Note: This is included as Custom CSS on the Podio Webform.
+//     // Documented here for reference. This is not applied to the form
+//     // through this stylesheet.
+//     html {
+//         background-color: transparent;
+//     }
+//     body {
+//         background-color: #69c9ca; // teal
+//         color: #3D2313; // brown
+//     }
+//     html.classic body .form .field input.text, html.classic body .form .field textarea, html.classic body .form .field input.date {
+//         border: none;
+//         -webkit-border-radius: 5px;
+//         -moz-border-radius: 5px;
+//         border-radius: 5px;
+//     }
+//     label, .label, input {
+//         color: #3D2313;
+//     }
+//     .form .field .label em {
+//         color: #3D2313;
+//     }
+//     a {
+//         color: black;
+//     }
+//     html.classic body .buttons .submit {
+//         background-image: none;
+//         background-color: #3D2313;
+//     }
+// }
