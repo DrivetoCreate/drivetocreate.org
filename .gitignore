@@ -5,3 +5,5 @@ dist
 .sass-cache
 app/bower_components
 BrowserStackTunnel.jar
+*.zip
+npm-debug.log

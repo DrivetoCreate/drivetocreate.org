@@ -25,14 +25,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer' ]
@@ -47,10 +39,12 @@ module.exports = function (grunt) {
                 },
                 files: [
                     '<%= yeoman.app %>/*.html',
+                    '<%= yeoman.app %>/partials/*',
                     '.tmp/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
+                ],
+                tasks: ['htmlbuild:dev', 'copy:pages', 'clean:tmpPages']
             }
         },
         connect: {
@@ -106,7 +100,9 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
-            server: '.tmp'
+            server: '.tmp',
+            pages: '<%= yeoman.dist %>/pages',
+            tmpPages: '.tmp/pages'
         },
         jshint: {
             options: {
@@ -125,26 +121,6 @@ module.exports = function (grunt) {
                     run: true,
                     urls: ['http://localhost:<%= connect.options.port %>/index.html']
                 }
-            }
-        },
-        coffee: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/scripts',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/scripts',
-                    ext: '.js'
-                }]
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: 'test/spec',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/spec',
-                    ext: '.js'
-                }]
             }
         },
         compass: {
@@ -181,26 +157,31 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        // not used since Uglify task does concat,
-        // but still available if needed
-        /*concat: {
-            dist: {}
-        },*/
-        // not enabled since usemin task does concat and uglify
-        // check index.html to edit your build targets
-        // enable this task if you prefer defining your build targets here
-        /*uglify: {
-            dist: {}
-        },*/
-        rev: {
+        fixturesPath: '<%= yeoman.app %>/partials',
+        htmlbuild: {
             dist: {
-                files: {
-                    src: [
-                        '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                        '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                        '<%= yeoman.dist %>/styles/fonts/*'
-                    ]
+                src: ['<%= yeoman.app %>/index.html', '<%= yeoman.app %>/pages/*.html'],
+                dest: '<%= yeoman.dist %>/pages',
+                options: {
+                    relative: true,
+                    parseTag: 'htmlbuild',
+                    sections: {
+                        footer: '<%= fixturesPath %>/footer.html',
+                        analytics: '<%= fixturesPath %>/analytics_snippet.html',
+                        topNav: '<%= fixturesPath %>/top_nav.html'
+                    }
+                }
+            },
+            dev: {
+                src: ['<%= yeoman.app %>/index.html', '<%= yeoman.app %>/pages/*.html'],
+                dest: '.tmp/pages',
+                options: {
+                    relative: true,
+                    parseTag: 'htmlbuild',
+                    sections: {
+                        footer: '<%= fixturesPath %>/footer.html',
+                        topNav: '<%= fixturesPath %>/top_nav.html'
+                    }
                 }
             }
         },
@@ -208,13 +189,13 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= yeoman.dist %>'
             },
-            html: '<%= yeoman.app %>/index.html'
+            html: '<%= yeoman.app %>/{,*/}index.html'
         },
         usemin: {
             options: {
                 dirs: ['<%= yeoman.dist %>']
             },
-            html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/application/{,*/}*.html'],
+            html: '<%= yeoman.dist %>/{,*/}*.html',
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
         },
         imagemin: {
@@ -237,22 +218,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        cssmin: {
-            // This task is pre-configured if you do not wish to use Usemin
-            // blocks for your CSS. By default, the Usemin block from your
-            // `index.html` will take care of minification, e.g.
-            //
-            //     <!-- build:css({.tmp,app}) styles/main.css -->
-            //
-            // dist: {
-            //     files: {
-            //         '<%= yeoman.dist %>/styles/main.css': [
-            //             '.tmp/styles/{,*/}*.css',
-            //             '<%= yeoman.app %>/styles/{,*/}*.css'
-            //         ]
-            //     }
-            // }
-        },
         htmlmin: {
             dist: {
                 options: {
@@ -269,7 +234,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.app %>',
-                    src: '*.html',
+                    src: '404.html',
                     dest: '<%= yeoman.dist %>'
                 }]
             }
@@ -296,6 +261,22 @@ module.exports = function (grunt) {
                     src: [
                         'generated/*'
                     ]
+                }, {
+                    expand: true,
+                    cwd: '<%= yeoman.dist %>/pages',
+                    dest: '<%= yeoman.dist %>/',
+                    src: [
+                        '*.html',
+                        '!404.html'
+                    ],
+                    rename: function (dest, src) {
+                        if (src === 'index.html') {
+                            return dest + 'index.html';
+                        } else {
+                            var path = src.split('.')[0];
+                            return dest + path.replace(/-/g,'/') + '/index.html';
+                        }
+                    }
                 }]
             },
             styles: {
@@ -304,20 +285,36 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            pages: {
+                expand: true,
+                cwd: '.tmp/pages',
+                dest: '.tmp/',
+                src: [
+                    '*.html',
+                    '!404.html'
+                ],
+                rename: function (dest, src) {
+                    if (src === 'index.html') {
+                        return dest + 'index.html';
+                    } else {
+                        var path = src.split('.')[0];
+                        return dest + path.replace(/-/g,'/') + '/index.html';
+                    }
+
+                }
             }
         },
         concurrent: {
             server: [
                 'compass',
-                'coffee:dist',
-                'copy:styles'
+                'copy:styles',
+                'copy:pages'
             ],
             test: [
-                'coffee',
                 'copy:styles'
             ],
             dist: [
-                'coffee',
                 'compass',
                 'copy:styles',
                 'imagemin',
@@ -334,10 +331,12 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
+            'htmlbuild:dev',
             'concurrent:server',
             'autoprefixer',
             'connect:livereload',
             'open',
+            'clean:tmpPages',
             'watch'
         ]);
     });
@@ -358,8 +357,9 @@ module.exports = function (grunt) {
         'concat',
         'cssmin',
         'uglify',
+        'htmlbuild:dist',
         'copy:dist',
-        //'rev',
+        'clean:pages',
         'usemin'
     ]);
 
