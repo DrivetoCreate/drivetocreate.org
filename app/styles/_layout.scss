@@ -112,24 +112,44 @@ footer.full-width {
 	input {
 		border-radius: $border-radius;
 	}
-	ul {
+	ul.social-icons, ul.info-items {
 		list-style: none;
 		li {
 			display: inline;
 			float: left;
 			width: 33%;
 			text-align: center;
-			font-size: 4em;
-			i {
-				color: $magenta;
-			}
-			@media #{$small} {
-				font-size: 2em;
-				text-align: left;
-				width: auto;
-			}
 		}
 	}
+    ul.social-icons li {
+        font-size: 4em;
+        i {
+            color: $magenta;
+        }
+        @media #{$small} {
+            font-size: 2em;
+            text-align: left;
+            width: auto;
+        }
+    }
+    ul.info-items {
+        max-width: 35em;
+        li {
+            font-size:0.6em;
+            display: block;
+            width: 100%;
+            @media #{$small} {
+                display: inline;
+                width: 33%;
+            }
+            a {
+                color: inherit;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
     #mc_embed_signup {
         input[type=text], input[type=email] textarea {
             outline: none;

@@ -19,28 +19,11 @@
         <!-- endbuild -->
     </head>
     <body>
+
         <section class="full-width hp-header">
             <div class="row">
-                <nav class="top-nav">
-                    <a href="/" title="Home"><span class="logo"></span></a>
-                    <ul>
-                        <!-- <li class="nav-item">
-                            <a href="/lend-a-hand/" title="Lend a Hand">lend a hand</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/about/" title="About">about</a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a href="/application/" title="Non-profit Application">non-profit application</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a href="/get-educated/" title="Get Educated">get educated</a>
-                        </li>-->
-                        <li class="nav-item">
-                            <a href="http://fundly.com/fuel-the-drive" title="Donate">donate</a>
-                        </li>
-                    </ul>
-                </nav>
+                <!-- htmlbuild:section topNav -->
+                <!-- /htmlbuild -->
 
                 <h1 class="small-12 columns hp-header">We invest our time &amp; creativity in non-profits that have the potential to make a huge impact in society.</h1>
             </div>
@@ -84,40 +67,11 @@
             </div>
         </section>
 
-        <footer class="full-width">
-            <div class="row">
-                <ul class="social-icons small-12 large-1 columns">
-                    <li><a href="https://www.twitter.com/drivetocreate" title="Drive to Create on Twitter"><i class="icon-twitter"></i></li>
-                    <li><a href="https://www.facebook.com/drivetocreate" title="Drive to Create on Facebook"><i class="icon-facebook"></i></li>
-                    <li><a href="mailto:info@drivetocreate.org" title="Email Drive to Create"><i class="icon-mail"></i></li>
-                </ul>
-                <nav class="small-12 large-6 columns">
-                    <a href="/application/" class="nav-item" title="Apply for Assistance">Non-profit Application</a>
-                    <a href="http://fundly.com/fuel-the-drive" class="nav-item" title="Donate">Donate</a>
-                </nav>
-                <!-- Begin MailChimp Signup Form -->
-                <div id="mc_embed_signup" class="small-12 large-4 columns">
-                    <form action="http://drivetocreate.us4.list-manage.com/subscribe/post?u=0d412f8c6d378ed00b7374fe9&amp;id=c9fb2213e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <label for="mce-EMAIL">Receive our Newsletter</label>
-                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                        <small>We only email you with big news. Never to beg.</small>
-                    </form>
-                </div>
-            </div>
-        </footer>
+        <!-- htmlbuild:section footer -->
+        <!-- /htmlbuild -->
 
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+        <!-- htmlbuild:section optional analytics -->
+        <!-- /htmlbuild -->
 
         <!-- build:js scripts/jquery.js -->
         <script src="/bower_components/jquery/jquery.js"></script>
@@ -147,6 +101,15 @@
                 $('.video-embed').html($(vimeoPlayer));
                 $('.dark-overlay').fadeToggle(500);
                 $('.video-embed').fadeToggle(500);
+            });
+        </script>
+
+        <script type="text/javascript">
+            // Simple utility to highlight active page
+            $('li.nav-item').each(function (i, e) {
+                if ($(e).find('a').attr('href') === document.location.pathname.split('index.html')[0] ) {
+                    $(e).addClass('active');
+                }
             });
         </script>
 
