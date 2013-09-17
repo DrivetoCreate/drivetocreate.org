@@ -274,7 +274,7 @@ module.exports = function (grunt) {
                             return dest + 'index.html';
                         } else {
                             var path = src.split('.')[0];
-                            return dest + path.replace(/-/g,'/') + '/index.html';
+                            return dest + path.replace(/_/g,'/') + '/index.html';
                         }
                     }
                 }]
@@ -299,7 +299,7 @@ module.exports = function (grunt) {
                         return dest + 'index.html';
                     } else {
                         var path = src.split('.')[0];
-                        return dest + path.replace(/-/g,'/') + '/index.html';
+                        return dest + path.replace(/_/g,'/') + '/index.html';
                     }
 
                 }
