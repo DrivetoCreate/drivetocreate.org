@@ -30,15 +30,7 @@
         </section>
 
         <section class="full-width bg-image hp-banner">
-            <div class="row">
-                <button class="play-button"><span class="arrow"></span></button>
-                <div class="dark-overlay hidden">
-                    <a href="#" class="js-close close-prompt" title="Close">&times;</a>
-                </div>
-                <div class="video-embed hidden small-10 small-centered large-7 columns flex-video vimeo">
-                    <!-- Vimeo embed code gets inserted here, as recommended at https://developer.vimeo.com/player/embedding -->
-                </div>
-            </div>
+           
         </section>
 
         <section class="full-width hp-donated">
@@ -93,15 +85,7 @@
 
             fitText(document.getElementById('hp-dollars-donated'), 0.72);
 
-            var vimeoVideoId = '50959272';
-            var vimeoPlayer = '<iframe src="http://player.vimeo.com/video/' + vimeoVideoId + '" frameborder="0" class="vimeo-video" autoplay webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
-
-            $('dark-overlay, .play-button, .js-close, .video-embed').on('click', function (event) {
-                event.preventDefault();
-                $('.video-embed').html($(vimeoPlayer));
-                $('.dark-overlay').fadeToggle(500);
-                $('.video-embed').fadeToggle(500);
-            });
+            
         </script>
 
         <script type="text/javascript">
