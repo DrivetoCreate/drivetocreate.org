@@ -248,6 +248,44 @@ ul.our-process {
     }
 }
 
+.key-player {
+    img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+    .name {
+        color: $brown;
+        font-size: 2.8em;
+        font-weight: normal;
+        margin-bottom: 0;
+        display: block;
+        float: left;
+    }
+    .social-icons {
+        display: block;
+        float: left;
+        margin-bottom: 0;
+        li {
+            display: inline;
+            margin-left: 0.25em;
+            color: $brown;
+            font-size: 1.7em;
+            line-height: 1em;
+        }
+    }
+    .title {
+        clear: left;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    p {
+        color: $brown;
+        font-size: 1em;
+    }
+}
+
 // .npa.side-column iframe html {
 //     // Note: This is included as Custom CSS on the Podio Webform.
 //     // Documented here for reference. This is not applied to the form

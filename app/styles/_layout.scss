@@ -207,3 +207,16 @@ footer.full-width {
 		display: inline-block;
 	}
 }
+
+.full-width.about {
+    background-color: $orange;
+    h1 {
+        color: $brown;
+    }
+}
+
+.full-width.key-players {
+    background-color: $teal;
+    color: white;
+
+}
