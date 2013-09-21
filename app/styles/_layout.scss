@@ -28,19 +28,19 @@ section.full-width, footer.full-width {
 			src='/images/home_banner.jpg',
 			sizingMethod='scale');
 	@include retina('/images/home_banner@2x.jpg');
-	height: 10em;
+	height: 20em;
 	.row {
 		position: relative;
 	}
 	@media screen and (min-width: 460px) {
-		height: 13em;
+		height: 23em;
 	}
 	@media #{$small} {
-		height: 19em;
+		height: 29em;
 		background-image: url(/images/home_banner@2x.jpg);
 	}
 	@media #{$medium} {
-		min-height: 23em;
+		min-height: 33em;
 	}
 }
 

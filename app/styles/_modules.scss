@@ -26,6 +26,23 @@
 	background-image: url(/images/logo.png);
 }
 
+.ten-hours{
+	background-image: url(/images/10.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: $light-brown;
+		display: block;
+		float:left;
+		width: 205px;
+		height: 126px;
+		margin-right:20px;
+}
+
+.no-svg .ten-hours {
+	background-image: url(/images/10.png);
+}
+
 h1.hp-header {
 	background-color: $brown;
 	color: white;
@@ -33,6 +50,52 @@ h1.hp-header {
 	margin: 0;
 	padding: 0 0 1em 0;
 	@include clearfix();
+}
+
+.hp-banner{
+	text-align:center;
+}
+
+.hp-banner h2{
+	color: white;
+}
+
+.hp-banner button {
+	border:1px solid #FFF;
+	background:rgba(0,0,0,.4);
+	padding:20px;
+	font-size:2.0em;
+	color:$teal;
+}
+
+.hp-banner button:hover{
+	background:rgba(0,0,0,.6);
+	-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.hp-donated h2{
+	color: white;
+}
+
+.hp-donated button {
+	border:1px solid #FFF;
+	background:rgba(255,255,255,0);
+	padding:20px;
+	font-size:1.1em;
+	color:white;
+}
+
+.hp-donated button:hover{
+	background:rgba(255,255,255,.1);
+	-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
 }
 
 .nav-item {
@@ -95,21 +158,26 @@ h1.hp-header {
 		color: gray;
 	}
 }
-
 .hp-donated {
-	p {
-		color: $brown;
-		font-size: 0.8em;
-	}
+	background:$teal;
+	padding:20px 0 20px;
 }
+	.hp-donated {
+		p {
+			color: $brown;
+			font-size: 1.1em;
+		}
+	}
 
 .big-number {
-	color: $teal;
+	color: white;
 	display: block;
 	@include clearfix();
 	@include openSansBold;
 	margin-top: 40px;
 	line-height: 110%;
+	text-shadow:$brown -3px -3px 0px;
+	text-align:center;
 }
 
 .donate-cta {
