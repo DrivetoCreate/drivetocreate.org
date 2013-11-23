@@ -47,14 +47,6 @@
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-body {
-	@include openSans;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	@include glegoo;
-}
-
 
 //***** FONTELLO ******//
 @font-face {

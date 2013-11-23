@@ -22,12 +22,12 @@ section.full-width, footer.full-width {
 }
 
 .hp-banner {
-	background-image: url(/images/home_banner.jpg);
-	background-position: left top;
+	background-image: url(/images/team_van_banner_sm.jpg);
+	background-position: center bottom;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-			src='/images/home_banner.jpg',
+			src='/images/team_van_banner_sm.jpg',
 			sizingMethod='scale');
-	@include retina('/images/home_banner@2x.jpg');
+	@include retina('/images/team_van_banner_sm@2x.jpg');
 	height: 20em;
 	.row {
 		position: relative;
@@ -37,10 +37,14 @@ section.full-width, footer.full-width {
 	}
 	@media #{$small} {
 		height: 29em;
-		background-image: url(/images/home_banner@2x.jpg);
 	}
 	@media #{$medium} {
 		min-height: 33em;
+		background-image: url(/images/team_van_banner_lg.jpg);
+		@include retina('/images/team_van_banner_lg@2x.jpg');
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+			src='/images/team_van_banner_lg.jpg',
+			sizingMethod='scale');
 	}
 }
 
@@ -65,9 +69,6 @@ section.full-width, footer.full-width {
 		}
 		h2 {
 			color: white;
-		}
-		p {
-			font-size: 0.9em;
 		}
 	}
 }
@@ -195,9 +196,9 @@ footer.full-width {
     color: $brown;
     background-color: $teal;
     padding-bottom: 1em;
-	@media #{$small} {
-        background-color: transparent;
-    }
+	// @media #{$small} {
+ //        background-color: transparent;
+ //    }
 }
 
 .close-prompt {

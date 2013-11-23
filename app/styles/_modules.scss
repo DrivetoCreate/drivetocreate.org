@@ -11,6 +11,7 @@
 	}
 	.logo {
 		background-image: url(/images/logo.svg);
+		.no-svg & { background-image: url(/images/logo.png); }
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -22,28 +23,25 @@
 	}
 }
 
-.no-svg .top-nav .logo {
-	background-image: url(/images/logo.png);
-}
-
 .ten-hours{
 	background-image: url(/images/10.svg);
+	.no-svg & { background-image: url(/images/10.png); }
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: left;
 		color: $light-brown;
 		display: block;
-		float:left;
-		width: 205px;
+		width: 100%;
 		height: 126px;
-		margin-right:20px;
+		margin-left: -2.1em; // Visually aligns the 1
+	@media #{$medium} {
+		float: left;
+		width: 30%;
+		margin-left: -1.6em;
+	}
 }
 
-.no-svg .ten-hours {
-	background-image: url(/images/10.png);
-}
-
-h1.hp-header {
+.page-header-text {
 	background-color: $brown;
 	color: white;
 	font-size: 1.7em;
@@ -66,19 +64,29 @@ h1.hp-header {
 	padding:20px;
 	font-size:2.0em;
 	color:$teal;
-}
-
-.hp-banner button:hover{
-	background:rgba(0,0,0,.6);
-	-o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
+	&:hover {
+		background:rgba(0,0,0,.6);
+		-o-transition:.5s;
+		-ms-transition:.5s;
+		-moz-transition:.5s;
+		-webkit-transition:.5s;
+		transition:.5s;
+	}
 }
 
 .hp-donated h2{
 	color: white;
+	@media #{$medium} {
+		float: left;
+		width: 60%;
+		max-width: 9em;
+		margin-left: 5%;
+		line-height: 1.55em;
+	}
+}
+
+.hp-donated p {
+	clear: both;
 }
 
 .hp-donated button {
@@ -114,50 +122,6 @@ h1.hp-header {
 	}
 }
 
-.play-button {
-	$size: 4em;
-	width: $size;
-	height: $size;
-	border-radius: #{$size / 2};
-	border-style: none;
-	background-color: $teal;
-	display: block;
-	position: absolute;
-	left: 48%;
-	left: -webkit-calc(50% - #{$size / 2});
-	left: -moz-calc(50% - #{$size / 2});
-	left: calc(50% - #{$size / 2});
-	top: 3em;
-	@media screen and (min-width: 460px) {
-		top: 4.5em;
-	}
-	@media #{$small} {
-		top: 7.5em;
-	}
-	@media #{$medium} {
-		top: 9.5em;
-	}
-	.arrow {
-		width: 0;
-		height: 0;
-		border-top: 1em solid transparent;
-		border-bottom: 1em solid transparent;
-		border-left: 1em solid white;
-		position: absolute;
-		left: 1.7em;
-		top: 1em;
-	}
-}
-
-.close-prompt {
-	color: white;
-	font-weight: bold;
-	font-size: 3em;
-	float: right;
-	&:hover {
-		color: gray;
-	}
-}
 .hp-donated {
 	background:$teal;
 	padding:20px 0 20px;
@@ -176,7 +140,6 @@ h1.hp-header {
 	@include openSansBold;
 	margin-top: 40px;
 	line-height: 110%;
-	text-shadow:$brown -3px -3px 0px;
 	text-align:center;
 }
 
