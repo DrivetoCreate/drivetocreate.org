@@ -1,0 +1,17 @@
+.volunteer-profile {
+	list-style: none;
+	clear: both;
+	.profile-picture {
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+	}
+	p {
+		width: 100%;
+		@media #{$small} {
+			width: 75%;
+			float: right;
+		}
+	}
+}

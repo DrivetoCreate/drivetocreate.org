@@ -30,17 +30,8 @@
 
         <section class="full-width row">
             <h2>Key Players</h2>
-            <ul class="bios">
-                <li class="volunteer-profile">
-                    <img src="/images/people/akaufman.png" alt="Aaron Kaufman's Profile Picture" />
-                    <h3 class="name">Aaron Kaufman</h3>
-                    <h4 class="volunteer-title">Founder &amp; President</h4>
-                    <ul class="social-icons">
-                        <li class="social-icon"><a href="http://instagram.com/kaufmandesign" title="Aaron on Instagram"><i class="icon-instagram"></i></a></li>
-                        <li class="social-icon"><a href="http://www.linkedin.com/in/aaronscottkaufman" title="Aaron on LinkedIn"><i class="icon-linkedin"></i></a></li>
-                        <li class="social-icon"><a href="https://twitter.com/kaufmandesign" title="Aaron on Twitter"><i class="icon-twitter"></i></a></li>
-                    </ul>
-                </li>
+            <ul class="profiles">
+                
 
             </ul>
         </section>
@@ -61,6 +52,7 @@
 
         <!-- build:js /scripts/plugins.js -->
         <script src="/bower_components/fittext/fittext.js"></script>
+        <script src="/bower_components/handlebars/handlebars.min.js"></script>
         <script src="/bower_components/foundation/js/foundation/foundation.orbit.js"></script>
         <!-- endbuild -->
 
@@ -71,6 +63,85 @@
                     $(e).addClass('active');
                 }
             });
+        </script>
+
+        <script type="text/x-handlebars-template" id="volunteer-profile-template">
+            <li class="volunteer-profile">
+                <img src="/images/people/{{img_url}}" alt="{{first_name}} {{last_name}}'s Profile Picture" class="profile-picture small-3 columns" />
+                <h3 class="name">{{first_name}} {{last_name}}</h3>
+                <h4 class="volunteer-title">{{title}}</h4>
+                <ul class="social-icons">
+                    {{#if instagram_name}}
+                    <li class="social-icon"><a href="http://instagram.com/{{instagram_name}}" title="{{first_name}} on Instagram"><i class="icon-instagram"></i></a></li>
+                    {{/if}}
+                    {{#if linkedin_url_fragment}}
+                    <li class="social-icon"><a href="http://www.linkedin.com/in/{{linkedin_url_fragment}}/" title="{{first_name}} on LinkedIn"><i class="icon-linkedin"></i></a></li>
+                    {{/if}}
+                    {{#if twitter_handle}}
+                    <li class="social-icon"><a href="https://twitter.com/{{twitter_handle}}" title="{{first_name}} on Twitter"><i class="icon-twitter"></i></a></li>
+                    {{/if}}
+                    {{{bio_html}}}
+                </ul>
+            </li>
+        </script>
+
+        <script type="text/javascript">
+            var volunteers = [
+                {
+                    first_name: 'Aaron',
+                    last_name: 'Kaufman',
+                    title: 'Founder & President',
+                    img_url: 'akaufman.jpeg',
+                    twitter_handle: 'kaufmandesign',
+                    instagram_name: 'kaufmandesign',
+                    linkedin_url_fragment: 'aaronscottkaufman',
+                    bio_html: '<p>Kind of a tool</p>'
+                },
+                {
+                    first_name: 'Will',
+                    last_name: 'Dages',
+                    title: 'Board Member and Director of Web Operations',
+                    img_url: 'wdages',
+                    twitter_handle: 'willdages',
+                    instagram_name: 'willdages',
+                    linkedin_url_fragment: 'willdages',
+                    bio_html: '<p>Selfies banh mi squid gastropub craft beer 90\'s. Odd Future Bushwick distillery, voluptate VHS do food truck. Seitan blog bitters Bushwick consectetur irony. Artisan forage slow-carb 8-bit, do locavore American Apparel DIY art party pug ullamco. Eiusmod nihil craft beer 3 wolf moon cupidatat, Intelligentsia Shoreditch bespoke yr gastropub. Delectus mlkshk selfies direct trade seitan. Tonx art party cliche chambray.</p><p>Accusamus viral nisi cray Odd Future. Carles tattooed slow-carb keytar velit street art. Small batch sapiente pork belly, freegan kale chips ullamco swag in Tonx aliqua polaroid. Freegan Helvetica farm-to-table, wayfarers ethnic try-hard PBR&B letterpress banh mi shabby chic artisan occaecat Neutra. Biodiesel pork belly bespoke, fingerstache farm-to-table twee wayfarers 8-bit disrupt craft beer keytar cliche. Reprehenderit trust fund aute retro Cosby sweater. Sunt fanny pack id, bitters chia odio ullamco banjo Blue Bottle put a bird on it flexitarian.</p>'
+                },
+                {
+                    first_name: 'Sarah',
+                    last_name: 'Bokone',
+                    title: 'Board Member',
+                    img_url: 'sbokone',
+                    twitter_handle: 'boko',
+                    instagram_name: 'willdages',
+                    linkedin_url_fragment: 'willdages'
+                },
+                {
+                    first_name: 'Will',
+                    last_name: 'Dages',
+                    title: 'Board Member and Director of Web Operations',
+                    img_url: 'wdages',
+                    twitter_handle: 'willdages',
+                    instagram_name: 'willdages',
+                    linkedin_url_fragment: 'willdages'
+                },
+                {
+                    first_name: 'Will',
+                    last_name: 'Dages',
+                    title: 'Board Member and Director of Web Operations',
+                    img_url: 'wdages',
+                    twitter_handle: 'willdages',
+                    instagram_name: 'willdages',
+                    linkedin_url_fragment: 'willdages'
+                }
+            ];
+
+            var source = $('#volunteer-profile-template').html();
+            var template = Handlebars.compile(source);
+            $.each(volunteers, function() {
+                $('ul.profiles').append(template(this));
+            });
+            
         </script>
 
 </body>
