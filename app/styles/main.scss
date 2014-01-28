@@ -1,10 +1,11 @@
 @import
   "../bower_components/foundation/scss/normalize",
   "custom-foundation",
-  "fonts", 
+  "../bower_components/bourbon/app/assets/stylesheets/bourbon",
+  "../bower_components/neat/app/assets/stylesheets/neat",
+  "fonts",
   "base",
   "mixins",
   "colors",
   "layout",
-  "modules/misc",
-  "modules/volunteer-profile";
+  "modules/all-modules";

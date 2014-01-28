@@ -1,17 +1,81 @@
 .volunteer-profile {
 	list-style: none;
 	clear: both;
-	.profile-picture {
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		-o-border-radius: 50%;
-		border-radius: 50%;
-	}
-	p {
-		width: 100%;
-		@media #{$small} {
-			width: 75%;
-			float: right;
-		}
-	}
+    color: $medium-brown;
+    margin-bottom: 2em;
+    float: left;
 }
+
+.volunteer-profile-picture {
+    border-radius: 50%;
+}
+
+.volunteer-name {
+    font-size: 1.5em;
+    @include media($small-screen) {
+        font-size: 2.25em;
+    }
+    margin: 0;
+    float: left;
+    color: $medium-brown;
+}
+
+.volunteer-social-icons {
+    float: left;
+    width: auto;
+    list-style: none;
+    padding: 0;
+    &.inline-icons {
+        display: none;
+        margin: 0.2em 0 0.2em 1em;
+        @include media(600px) {
+            display: inline;
+        }
+    }
+    &.oneline-icons {
+        display: inline-block;
+        margin: 0;
+        margin-top: -1em;
+        padding: 0;
+        width: 100%;
+        @include media(600px) {
+            display: none;
+        }
+    }
+}
+
+.volunteer-social-icon {
+    float: left;
+    margin-right: 0.5em;
+    i {
+        color: $medium-brown;
+        &:before {
+            margin: 0;
+        }
+    }
+}
+
+.volunteer-social-link {
+    font-size: 1.5em;
+    line-height: 1em;
+    @include media(768px) {
+        line-height: 1.9em;
+    }
+    .oneline-icons & {
+        font-size: 2.5em;
+    }
+}
+
+.volunteer-title {
+    font-size: 1.25em;
+    color: white;
+    margin: 0 0 1em;
+    width: 100%;
+    float: left;
+}
+
+.volunteer-profile-bio {
+    width: 100%;
+    float: left;
+}
+
