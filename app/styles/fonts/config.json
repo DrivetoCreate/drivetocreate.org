@@ -3,6 +3,8 @@
   "css_prefix_text": "icon-",
   "css_use_suffix": false,
   "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
   "glyphs": [
     {
       "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
@@ -44,6 +46,18 @@
       "uid": "ce1d525f3f31024c6a6b38f5e9a88953",
       "css": "facebook",
       "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "21adad41ffebf469b2370d26bcb8a3c4",
+      "css": "linkedin-circled",
+      "code": 59403,
+      "src": "entypo"
+    },
+    {
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "code": 59404,
       "src": "entypo"
     },
     {
