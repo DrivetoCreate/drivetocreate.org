@@ -1,0 +1,26 @@
+.transformation-arrows {
+    color: white;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 109px;
+    font-size: 5em;
+    height: 1.3em;
+    .arrow-back {
+        position: absolute;
+        z-index: 1;
+        opacity: 0.5;
+        top: -8px;
+    }
+    .arrow-middle {
+        position: absolute;
+        z-index: 2;
+        opacity: 0.75;
+    }
+    .arrow-top {
+        position: absolute;
+        z-index: 3;
+        opacity: 1;
+        top: 8px;
+    }
+}

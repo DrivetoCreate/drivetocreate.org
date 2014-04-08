@@ -10,7 +10,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Glegoo|Open+Sans:300,800' rel='stylesheet' type='text/css'>
-        <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <!-- build:css({.tmp,app}) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -18,41 +17,43 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
-    <body>
+    <body class="homepage">
+        <div class="bg-video-container">
+            <video autoplay loop muted class="bg-video">
+                <source src="videos/homepage-loop.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <section class="full-width hp-header">
-            <div class="row">
-                <!-- htmlbuild:section topNav -->
-                <!-- /htmlbuild -->
+        <section class="full-width color-topNav color-homepage-topNav">
+            <div class="content">
+                <!-- htmlbuild:section topNav --><!-- /htmlbuild -->
+             </div>
+        </section>
 
-                <h1 class="small-10 columns page-header-text">Free marketing services for non-profits</h1>
+        <section class="full-width color-hp-header">
+            <div class="video-overlay hp-video-overlay-text content">
+                <h1>We donate free marketing services to non-profits through creative, one-day marathons.</h1>
+                <a class="button" href="/application/" >Learn More &amp; Apply <i class="icon-right-circled"></i></a>
             </div>
         </section>
 
-        <section class="full-width bg-image hp-banner">
-           <h2><span class="big-number" id="hp-dollars-donated">$100,000+</span> in marketing services donated since 2012.</h2>
-            <button>See how we do it</button>
+        <section class="full-width">
+            <div id="map-canvas"></div>
         </section>
 
-        <section class="full-width hp-donated">
-            <div class="row">
-
-                <div class="small-8 small-centered large-5 columns">
-                    <span class="ten-hours"></span>
-                    <h2>A Creative Stimulant</h2>
-                    <p>Our dedicated volunteers work on-site with each non-profit for 10 – 12 hours. When we leave, they get everything our team created. It’s really that simple.</p>
-                    <button>View past work</button>
-                </div>
-
-        </section>
-
-        <section class="full-width bg-image hp-driver">
-            <div class="small-10 small-centered large-8 columns callout">
-                <div class="small-12 large-7 columns">
-                    <h2>Fuel the Drive</h2>
-                    <p>Be the momentum and help us fuel the drive. Whether volunteering or donating to our cause, your generosity helps us energize non-profits so they can continue giving hope to those they help.</p>
-                </div>
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5VGUZSVF6TBQ" title="Donate" class="donate-cta">Donate</a>
+        <section class="full-width color-hp-donation">
+            <div class="amount-raised">
+                <span class="dollar-amount-raised">$3,127</span>
+                <span class="amount-raised-label">raised since 2012</span>
+            </div>
+            <div class="transformation-arrows">
+                <i class="icon-arrow-down arrow-back"></i>
+                <i class="icon-arrow-down arrow-middle"></i>
+                <i class="icon-arrow-down arrow-top"></i>
+            </div>
+            <div class="amount-donated">
+                <span class="dollar-amount-donated">$115,274</span>
+                <span class="amount-donated-label">in marketing services donated</span>
             </div>
         </section>
 
@@ -77,13 +78,14 @@
 
         <script type="text/javascript">
             'use strict';
-
             $(document).foundation();
-
-            fitText(document.getElementById('hp-dollars-donated'), 0.72);
-
-
         </script>
+        <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+
 
         <script type="text/javascript">
             // Simple utility to highlight active page

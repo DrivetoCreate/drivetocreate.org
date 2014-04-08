@@ -30,7 +30,7 @@
 
         <section class="full-width row background-people">
             <div class="content">
-                <h2>People</h2>
+                <h2>Meet Our Key Players</h2>
                 <ul class="profiles"></ul>
             </div>
         </section>
@@ -70,63 +70,41 @@
                 <div class="volunteer-profile-info">
                     <h3 class="volunteer-name">{{first_name}} {{last_name}}</h3>
                     <ul class="volunteer-social-icons inline-icons">
-                        {{#if instagram_name}}
-                        <li class="volunteer-social-icon"><a href="http://instagram.com/{{instagram_name}}" title="{{first_name}} on Instagram" class="volunteer-social-link"><i class="icon-instagram"></i></a></li>
+                        {{#if instagram}}
+                        <li class="volunteer-social-icon"><a href="http://instagram.com/{{instagram}}" title="{{first_name}} on Instagram" class="volunteer-social-link"><i class="icon-instagram"></i></a></li>
                         {{/if}}
-                        {{#if linkedin_url_fragment}}
-                        <li class="volunteer-social-icon"><a href="http://www.linkedin.com/in/{{linkedin_url_fragment}}/" title="{{first_name}} on LinkedIn" class="volunteer-social-link"><i class="icon-linkedin"></i></a></li>
+                        {{#if linkedin}}
+                        <li class="volunteer-social-icon"><a href="http://www.linkedin.com/in/{{linkedin}}/" title="{{first_name}} on LinkedIn" class="volunteer-social-link"><i class="icon-linkedin-circled"></i></a></li>
                         {{/if}}
-                        {{#if twitter_handle}}
-                        <li class="volunteer-social-icon"><a href="https://twitter.com/{{twitter_handle}}" title="{{first_name}} on Twitter" class="volunteer-social-link"><i class="icon-twitter"></i></a></li>
+                        {{#if twitter}}
+                        <li class="volunteer-social-icon"><a href="https://twitter.com/{{twitter}}" title="{{first_name}} on Twitter" class="volunteer-social-link"><i class="icon-twitter"></i></a></li>
                         {{/if}}
                     </ul>
                     <h4 class="volunteer-title">{{title}}</h4>
                     <p class="volunteer-profile-bio">{{{bio_html}}}</p>
                     <ul class="volunteer-social-icons oneline-icons">
-                        {{#if instagram_name}}
-                        <li class="volunteer-social-icon"><a href="http://instagram.com/{{instagram_name}}" title="{{first_name}} on Instagram" class="volunteer-social-link"><i class="icon-instagram"></i></a></li>
+                        {{#if instagram}}
+                        <li class="volunteer-social-icon"><a href="http://instagram.com/{{instagram}}" title="{{first_name}} on Instagram" class="volunteer-social-link"><i class="icon-instagram"></i></a></li>
                         {{/if}}
-                        {{#if linkedin_url_fragment}}
-                        <li class="volunteer-social-icon"><a href="http://www.linkedin.com/in/{{linkedin_url_fragment}}/" title="{{first_name}} on LinkedIn" class="volunteer-social-link"><i class="icon-linkedin"></i></a></li>
+                        {{#if linkedin}}
+                        <li class="volunteer-social-icon"><a href="http://www.linkedin.com/in/{{linkedin}}/" title="{{first_name}} on LinkedIn" class="volunteer-social-link"><i class="icon-linkedin-circled"></i></a></li>
                         {{/if}}
-                        {{#if twitter_handle}}
-                        <li class="volunteer-social-icon"><a href="https://twitter.com/{{twitter_handle}}" title="{{first_name}} on Twitter" class="volunteer-social-link"><i class="icon-twitter"></i></a></li>
+                        {{#if twitter}}
+                        <li class="volunteer-social-icon"><a href="https://twitter.com/{{twitter}}" title="{{first_name}} on Twitter" class="volunteer-social-link"><i class="icon-twitter"></i></a></li>
                         {{/if}}
                     </ul>
                 </div>
             </li>
         </script>
 
-        <script type="text/javascript">
-            var volunteers = [
-                {
-                    first_name: 'Aaron',
-                    last_name: 'Kaufman',
-                    title: 'Founder & President',
-                    img_url: 'akaufman.jpeg',
-                    twitter_handle: 'kaufmandesign',
-                    instagram_name: 'kaufmandesign',
-                    linkedin_url_fragment: 'aaronscottkaufman',
-                    bio_html: 'Selfies banh mi squid gastropub craft beer 90\'s. Odd Future Bushwick distillery, voluptate VHS do food truck. Seitan blog bitters Bushwick consectetur irony. Artisan forage slow-carb 8-bit, do locavore American Apparel DIY art party pug ullamco. Eiusmod nihil craft beer 3 wolf moon cupidatat, Intelligentsia Shoreditch bespoke yr gastropub. Delectus mlkshk selfies direct trade seitan. Tonx art party cliche chambray.'
-                },
-                {
-                    first_name: 'Will',
-                    last_name: 'Dages',
-                    title: 'Board Member and Director of Web Operations',
-                    img_url: 'akaufman.jpeg',
-                    twitter_handle: 'willdages',
-                    instagram_name: 'willdages',
-                    linkedin_url_fragment: 'willdages',
-                    bio_html: 'Selfies banh mi squid gastropub craft beer 90\'s. Odd Future Bushwick distillery, voluptate VHS do food truck. Seitan blog bitters Bushwick consectetur irony. Artisan forage slow-carb 8-bit, do locavore American Apparel DIY art party pug ullamco. Eiusmod nihil craft beer 3 wolf moon cupidatat, Intelligentsia Shoreditch bespoke yr gastropub. Delectus mlkshk selfies direct trade seitan. Tonx art party cliche chambray.'
-                }
-            ];
+        <script type="text/javascript" src="/data/volunteers.js"></script>
 
+        <script type="text/javascript">
             var source = $('#volunteer-profile-template').html();
             var template = Handlebars.compile(source);
             $.each(volunteers, function() {
                 $('ul.profiles').append(template(this));
             });
-
         </script>
 
 </body>

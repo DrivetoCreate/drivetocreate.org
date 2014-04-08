@@ -2,18 +2,18 @@
 // Glegoo (400) and Open Sans (300, 800)
 
 @mixin glegoo {
-	font-family: 'Glegoo', serif;
-	font-weight: 400;
+    font-family: 'Glegoo', serif;
+    font-weight: 400;
 }
 
 @mixin openSans {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 @mixin openSansBold {
-	@include openSans;
-	font-weight: 800;
+    @include openSans;
+    font-weight: 800;
 }
 
 @mixin fontStyles {
@@ -87,4 +87,5 @@
 .icon-phone:before { content: '\e806'; }
 .icon-linkedin-circled:before { content: '\e80b'; }
 .icon-instagram:before { content: '\e80c'; }
-
+.icon-arrow-down:before { content: '\e80d'; }
+.icon-help-circled:before { content: '\e80e'; }

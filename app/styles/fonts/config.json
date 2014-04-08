@@ -7,6 +7,12 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "17ebadd1e3f274ff0205601eef7b9cc4",
+      "css": "help-circled",
+      "code": 59406,
+      "src": "fontawesome"
+    },
+    {
       "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
       "css": "phone",
       "code": 59398,
@@ -16,6 +22,12 @@
       "uid": "531bc468eecbb8867d822f1c11f1e039",
       "css": "calendar",
       "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ccddff8e8670dcd130e3cb55fdfc2fd0",
+      "css": "arrow-down",
+      "code": 59405,
       "src": "fontawesome"
     },
     {

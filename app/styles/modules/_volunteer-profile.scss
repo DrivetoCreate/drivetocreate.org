@@ -12,7 +12,7 @@
 
 .volunteer-name {
     font-size: 1.5em;
-    @include media($small-screen) {
+    @include media(em(600)) {
         font-size: 2.25em;
     }
     margin: 0;
