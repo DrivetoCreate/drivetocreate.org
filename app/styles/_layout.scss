@@ -31,27 +31,13 @@
     }
 }
 
-.npa-content {
+.row, .content {
+    @include row();
+    max-width: 95%;
+    margin: 0 auto;
     @include media(em(600)) {
-        @include fauxColumns(white, $teal, 58.432934926959%);
+        max-width: 100%;
     }
-}
-
-.npa.main-column {
-    background-color: white;
-    color: $brown;
-    h1, h2, h4, h5, h6 {
-        color: $teal;
-    }
-    @include media(em(600)) {
-        background-color: transparent;
-    }
-}
-
-.npa.side-column {
-    color: $brown;
-    background-color: $teal;
-    padding-bottom: 1em;
 }
 
 .close-prompt {
@@ -59,14 +45,6 @@
     padding: 10px 20px;
     @include media(em(600)) {
         display: inline-block;
-    }
-}
-
-.row {
-    max-width: 95%;
-    margin: 0 auto;
-    @include media(em(600)) {
-        max-width: 100%;
     }
 }
 
@@ -158,11 +136,6 @@ $header-nav-height: 70px;
     }
 }
 
-#map-canvas {
-    width: 100%;
-    height: 400px;
-}
-
 .amount-raised, .amount-donated {
     text-align: center;
     width: 100%;
@@ -225,5 +198,32 @@ $header-nav-height: 70px;
     }
     @include media(em(1024)) {
         @include span-columns(7);
+    }
+}
+
+//
+//  Nonprofit Application
+//
+
+.npa-content {
+    @include row();
+    background-color: white;
+    @include media(em(800)) {
+        @include fauxColumns(white, $teal, 58.432934926959%);
+    }
+}
+
+.npa-content .our-process {
+    @include media(em(800)) {
+        @include span-columns(7);
+        padding-left: 1em;
+    }
+}
+
+.npa-content .nonprofit-application {
+    padding-bottom: 1em;
+    @include media(em(800)) {
+        @include span-columns(5);
+        padding: 0 1em 1em;
     }
 }

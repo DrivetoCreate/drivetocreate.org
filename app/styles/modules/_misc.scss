@@ -32,17 +32,7 @@
     @include clearfix;
 }
 
-ul.our-process {
-    list-style: none;
-    li {
-        margin-bottom: 0.5em;
-        font-size: 1.2em;
-        margin-left: 3em;
-        i {
-            margin-left: -1.6em;
-        }
-    }
-}
+
 
 .panel {
     background-color: $brown;
