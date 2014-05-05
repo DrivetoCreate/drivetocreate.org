@@ -1,0 +1,48 @@
+.full-width {
+    &.bg-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    width: 100%;
+    max-width: 100%;
+    @include clearfix();
+    .content {
+        display: block;
+        margin: 0 auto;
+        max-width: 95%;
+        @include media(em(600)) {
+            max-width: em(1200);
+        }
+
+    }
+    &.hp-header {
+        background-color: $brown;
+        padding-top: 0.5em;
+    }
+}
+
+.row, .content {
+    @include row();
+    max-width: 95%;
+    margin: 0 auto;
+    @include media(em(600)) {
+        max-width: 100%;
+    }
+}
+
+.close-prompt {
+    display: none;
+    padding: 10px 20px;
+    @include media(em(600)) {
+        display: inline-block;
+    }
+}
+
+.row {
+    @include clearfix;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}

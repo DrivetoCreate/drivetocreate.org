@@ -1,0 +1,27 @@
+.volunteer-profile-picture {
+    @include span-columns(10);
+    @include shift(1);
+    margin-bottom: 1em;
+    @include media(em(500)) {
+        @include span-columns(6);
+        @include shift(3);
+    }
+    @include media(em(600)) {
+        @include span-columns(3);
+        @include shift(0);
+    }
+    @include media(em(1024)) {
+        @include span-columns(2);
+        @include shift(1);
+    }
+}
+
+.volunteer-profile-info {
+    @include span-columns(12);
+    @include media(em(600)) {
+        @include span-columns(9);
+    }
+    @include media(em(1024)) {
+        @include span-columns(7);
+    }
+}

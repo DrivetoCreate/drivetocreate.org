@@ -1,10 +1,9 @@
-@import
-  "foundation/scss/normalize",
-  "bourbon/app/assets/stylesheets/bourbon",
-  "neat/app/assets/stylesheets/neat",
-  "fonts",
-  "base",
-  "mixins",
-  "colors",
-  "layout",
-  "modules/all-modules";
+@import "foundation/scss/normalize",
+        "bourbon/app/assets/stylesheets/bourbon",
+        "neat/app/assets/stylesheets/neat",
+        "fonts",
+        "base",
+        "mixins",
+        "colors",
+        "layouts/all-layouts",
+        "modules/all-modules";

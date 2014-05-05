@@ -24,11 +24,15 @@ $orange: #F26A50;
         background-color: transparent;
         color: white;
     }
-    &.color-hp-donation {
+    &.color-hp-services {
         background-color: $blue;
         color: white;
     }
-    &.color-hp-what-we-do {
+    &.color-hp-apply-cta {
+        background-color: $magenta;
+        color: white;
+    }
+    &.color-hp-donate-cta {
         background-color: $teal;
         color: white;
     }

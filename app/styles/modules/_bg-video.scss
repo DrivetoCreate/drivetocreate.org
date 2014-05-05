@@ -16,18 +16,24 @@
     z-index: 2;
     color: white;
     h1 {
-        font-size: 1.2em;
+        font-size: 1.9em;
+        @include media(em(420)) {
+            font-size: 2.5em;
+        }
+        @include media(em(500)) {
+            font-size: 3em;
+        }
         @include media(em(600)) {
-            font-size: 2.4em;
+            font-size: 3.5em;
+        }
+        @include media(em(700)) {
+            font-size: 4em;
+        }
+        @include media(em(900)) {
+            font-size: 5em;
         }
         text-align: center;
         color: white;
-    }
-    .button {
-        font-size: 1.2em;
-        @include media(em(600)) {
-            font-size: 2em;
-        }
     }
 }
 

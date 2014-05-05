@@ -7,17 +7,30 @@
     @include clearfix();
 }
 
-.amount-raised {
-    opacity: 0.6;
-}
-
-.row {
-    @include clearfix;
-    height: 100%;
-}
-
-.hidden {
-    display: none;
+.homepage-text-callout {
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.1em;
+    @include media(em(500)) {
+        max-width: 70%;
+        font-size: 1.6em;
+    }
+    @include media(em(700)) {
+        max-width: 650px;
+    }
+    @include media(em(1000)) {
+        max-width: 730px;
+        font-size: 2em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 0;
+        font-size: 0.9em;
+    }
 }
 
 .dark-overlay {
@@ -31,8 +44,6 @@
     left: -2.1%;
     @include clearfix;
 }
-
-
 
 .panel {
     background-color: $brown;
