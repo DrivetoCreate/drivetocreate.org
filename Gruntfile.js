@@ -25,9 +25,9 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            compass: {
+            sass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server', 'autoprefixer' ]
+                tasks: ['sass:server', 'autoprefixer' ]
             },
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
@@ -123,7 +123,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        compass: {
+        sass: {
             options: {
                 sassDir: '<%= yeoman.app %>/styles',
                 cssDir: '.tmp/styles',
@@ -308,7 +308,7 @@ module.exports = function (grunt) {
         },
         concurrent: {
             server: [
-                'compass',
+                'sass',
                 'copy:styles',
                 'copy:pages'
             ],
@@ -316,7 +316,7 @@ module.exports = function (grunt) {
                 'copy:styles'
             ],
             dist: [
-                'compass',
+                'sass',
                 'copy:styles',
                 'imagemin',
                 'svgmin',

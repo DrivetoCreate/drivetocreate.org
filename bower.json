@@ -7,9 +7,11 @@
     "foundation": "~4.3.1",
     "zepto": "~1.0.0",
     "fittext": "latest",
-    "handlebars": "~1.1.2",
-    "neat": "~1.5.0",
-    "bourbon": "~3.1.8"
+    "handlebars": "~1.1.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "bourbon": "~4.0.1",
+    "neat": "~1.6.0",
+    "normalize-scss": "~3.0.1"
+  }
 }
