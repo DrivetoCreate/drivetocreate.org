@@ -9,7 +9,11 @@
 }
 
 .bg-video {
-    opacity: 0.2;
+    display: none;
+    @include media(em(650)) {
+        display: block;
+        opacity: 0.2;
+    }
 }
 
 .video-overlay {
