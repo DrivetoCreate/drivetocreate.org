@@ -1,0 +1,128 @@
+.page-header-text {
+    background-color: $brown;
+    color: white !important;
+    font-size: 1.7em;
+    margin: 0;
+    padding: 0 0 1em 0;
+    @include clearfix();
+}
+
+.homepage-text-callout {
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.1em;
+    @include media(em(500)) {
+        max-width: 70%;
+        font-size: 1.6em;
+    }
+    @include media(em(700)) {
+        max-width: 650px;
+    }
+    @include media(em(1000)) {
+        max-width: 730px;
+        font-size: 2em;
+        .l-hp-services & {
+            font-size: 2.6em;
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 0;
+        font-size: 0.9em;
+    }
+}
+
+.dark-overlay {
+    // Backgrounds for Videos
+    position: absolute;
+    z-index:1;
+    background-color: black;
+    width: 104.2%;
+    height: 100%;
+    top: 0;
+    left: -2.1%;
+    @include clearfix;
+}
+
+.panel {
+    background-color: $brown;
+    color: white;
+    //-webkit-border-radius: $border-radius;
+    //-moz-border-radius: $border-radius;
+    //border-radius: $border-radius;
+    padding: 2.5% 5%;
+    //height: 100%;
+    .header-icon {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 4em;
+    }
+    h3 {
+        color: white;
+    }
+    p {
+
+    }
+    &.overview {
+        background-color: $brown;
+        color: $teal;
+        .big-next {
+            &:before {
+                @include fontStyles;
+                content: '\e804';
+            }
+        }
+    }
+    &.application {
+        background-color: $orange;
+    }
+    &.chat {
+        background-color: $teal;
+    }
+    &.vote {
+        background-color: $magenta;
+    }
+    &.drive-day {
+        background-color: $blue;
+    }
+    &.relationship {
+        background-color: $brown;
+    }
+}
+
+// .npa.side-column iframe html {
+//     // Note: This is included as Custom CSS on the Podio Webform.
+//     // Documented here for reference. This is not applied to the form
+//     // through this stylesheet.
+//     html {
+//         background-color: transparent;
+//     }
+//     body {
+//         background-color: #69c9ca; // teal
+//         color: #3D2313; // brown
+//     }
+//     html.classic body .form .field input.text, html.classic body .form .field textarea, html.classic body .form .field input.date {
+//         border: none;
+//         -webkit-border-radius: 5px;
+//         -moz-border-radius: 5px;
+//         border-radius: 5px;
+//     }
+//     label, .label, input {
+//         color: #3D2313;
+//     }
+//     .form .field .label em {
+//         color: #3D2313;
+//     }
+//     a {
+//         color: black;
+//     }
+//     html.classic body .buttons .submit {
+//         background-image: none;
+//         background-color: #3D2313;
+//     }
+// }

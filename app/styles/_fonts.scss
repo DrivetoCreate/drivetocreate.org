@@ -2,18 +2,18 @@
 // Glegoo (400) and Open Sans (300, 800)
 
 @mixin glegoo {
-	font-family: 'Glegoo', serif;
-	font-weight: 400;
+    font-family: 'Glegoo', serif;
+    font-weight: 400;
 }
 
 @mixin openSans {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 @mixin openSansBold {
-	@include openSans;
-	font-weight: 800;
+    @include openSans;
+    font-weight: 800;
 }
 
 @mixin fontStyles {
@@ -45,14 +45,6 @@
 
     /* Uncomment for 3D effect */
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
-
-body {
-	@include openSans;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	@include glegoo;
 }
 
 
@@ -93,3 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 .icon-facebook:before { content: '\e800'; }
 .icon-calendar:before { content: '\e809'; }
 .icon-phone:before { content: '\e806'; }
+.icon-linkedin-circled:before { content: '\e80b'; }
+.icon-instagram:before { content: '\e80c'; }
+.icon-arrow-down:before { content: '\e80d'; }
+.icon-help-circled:before { content: '\e80e'; }

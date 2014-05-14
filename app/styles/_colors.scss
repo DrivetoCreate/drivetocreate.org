@@ -1,7 +1,43 @@
 // Default Palette
 $brown: #3D2313;
+$medium-brown: #533019;
 $light-brown: #BDA8A0;
 $teal: #69C9CA;
 $magenta: #C93B66;
 $blue: #0297D3;
 $orange: #F26A50;
+
+.full-width {
+    &.color-topNav {
+        background-color: $brown;
+        color: $light-brown;
+        &.color-homepage-topNav {
+            background-color: transparent;
+            color: white;
+        }
+    }
+    &.color-footer {
+        background-color: $brown;
+        color: $light-brown;
+    }
+    &.color-hp-header {
+        background-color: transparent;
+        color: white;
+    }
+    &.color-hp-services {
+        background-color: $blue;
+        color: white;
+    }
+    &.color-hp-apply-cta {
+        background-color: $magenta;
+        color: white;
+    }
+    &.color-hp-donate-cta {
+        background-color: $teal;
+        color: white;
+    }
+}
+
+.bg-video-container {
+    background-color: $brown;
+}

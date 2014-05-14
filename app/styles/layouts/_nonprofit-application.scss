@@ -1,0 +1,22 @@
+.npa-content {
+    @include row();
+    background-color: white;
+    @include media(em(800)) {
+        @include fauxColumns(white, $teal, 58.432934926959%);
+    }
+}
+
+.npa-content .our-process {
+    @include media(em(800)) {
+        @include span-columns(7);
+        padding-left: 1em;
+    }
+}
+
+.npa-content .nonprofit-application {
+    padding-bottom: 1em;
+    @include media(em(800)) {
+        @include span-columns(5);
+        padding: 0 1em 1em;
+    }
+}

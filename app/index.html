@@ -10,7 +10,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Glegoo|Open+Sans:300,800' rel='stylesheet' type='text/css'>
-        <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <!-- build:css({.tmp,app}) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -18,45 +17,44 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
-    <body>
+    <body class="homepage">
+        <div class="bg-video-container">
+            <video autoplay loop muted class="bg-video">
+                <source src="videos/homepageloop.mp4" type="video/mp4">
+                <source src="videos/homepageloop.webm" type="video/webm">
+                <source src="videos/homepageloop.ogv" type="video/ogg">
+                <object> <param name="movie" value="http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf"></param><param name="flashvars" value="src=http%3A%2F%2Fdrivetocreate.org%2Fvideos%2Fhomepageloop.mp4&controlBarMode=none&playButtonOverlay=false&autoPlay=true"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" flashvars="src=http%3A%2F%2Fdrivetocreate.org%2Fvideos%2Fhomepageloop.mp4&controlBarMode=none&playButtonOverlay=false&autoPlay=true"></embed></object>
+            </video>
+        </div>
 
-        <section class="full-width hp-header">
-            <div class="row">
-                <!-- htmlbuild:section topNav -->
-                <!-- /htmlbuild -->
+        <section class="full-width color-topNav color-homepage-topNav">
+            <div class="content">
+                <!-- htmlbuild:section topNav --><!-- /htmlbuild -->
+             </div>
+        </section>
 
-                <h1 class="small-12 columns hp-header">We invest our time &amp; creativity in non-profits that have the potential to make a huge impact in society.</h1>
+        <section class="full-width color-hp-header">
+            <div class="video-overlay hp-video-overlay-text content">
+                <h1>We help nonprofits change the world.</h1>
             </div>
         </section>
 
-        <section class="full-width bg-image hp-banner">
-           
+        <section class="full-width l-hp-services color-hp-services artwork-banner-pre ">
+            <h2 class="homepage-text-callout">We donate free marketing services to nonprofits through creative, one-day marathons.</h2>
+            <div class="transformation-arrows">
+                <i class="icon-arrow-down arrow-back"></i>
+                <i class="icon-arrow-down arrow-middle"></i>
+                <i class="icon-arrow-down arrow-top"></i>
+            </div>
+
         </section>
 
-        <section class="full-width hp-donated">
-            <div class="row">
-                <h2><span class="big-number" id="hp-dollars-donated">$100,000+</span> in creative services donated to date.</h2>
-                <p>We transform the time, experience and creativity from our dedicated volunteers into real deliverables for non-profits. We work on-site with each non-profit for a full (10-12 hour) marathon work day. When we leave, they get everything our team created.</p>
+        <section class="full-width color-hp-apply-cta l-hp-apply">
+            <div class="artwork-banner">
+                <a class="portfolio-button" title="See Our Portfolio" href="http://www.behance.net/drivetocreate"></a>
             </div>
-        </section>
-
-        <section class="full-width bg-image hp-movement">
-            <div class="row">
-                <div class="small-11 small-centered large-7 large-offset-5 columns callout">
-                    <h2>We're inspiring a movement</h2>
-                    <p>It’s a group effort. Much like the non-profits we serve, we donate our talents to make a greater impact. Join the movement. Let’s make an impact together.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="full-width bg-image hp-driver">
-            <div class="small-10 small-centered large-8 columns callout">
-                <div class="small-12 large-7 columns">
-                    <h2>Fuel the Drive</h2>
-                    <p>Be the momentum and help us fuel the drive. Whether volunteering or donating to our cause, your generosity helps us energize non-profits so they can continue giving hope to those they help.</p>
-                </div>
-                <a href="http://fundly.com/fuel-the-drive" title="Donate" class="donate-cta">Donate</a>
-            </div>
+            <h2 class="homepage-text-callout">We'll help your nonprofit thrive by creating new videos, websites, brochures, and more. All in one day. All for you. All for free.</h2>
+            <a class="button" href="/application/" >Apply Now</a>
         </section>
 
         <!-- htmlbuild:section footer -->
@@ -68,25 +66,6 @@
         <!-- build:js scripts/jquery.js -->
         <script src="/bower_components/jquery/jquery.js"></script>
         <!-- endbuild -->
-
-        <!-- build:js scripts/foundation.js -->
-        <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/plugins.js -->
-        <script src="/bower_components/fittext/fittext.js"></script>
-        <script src="/bower_components/foundation/js/foundation/foundation.orbit.js"></script>
-        <!-- endbuild -->
-
-        <script type="text/javascript">
-            'use strict';
-
-            $(document).foundation();
-
-            fitText(document.getElementById('hp-dollars-donated'), 0.72);
-
-            
-        </script>
 
         <script type="text/javascript">
             // Simple utility to highlight active page

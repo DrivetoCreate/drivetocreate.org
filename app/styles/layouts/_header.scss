@@ -1,0 +1,49 @@
+$header-nav-height: 70px;
+
+.header-home-link {
+    display: block;
+    float: left;
+    width: 100%;
+    @include media(em(600)) {
+        width: em(120);
+    }
+    .logo {
+        display: block;
+        float: left;
+        width: 100%;
+        background-position: left center;
+        line-height: $header-nav-height;
+        text-indent: -100%;
+        height: $header-nav-height;
+        margin: 0.5em 0;
+        @include media(em(600)) {
+            background-position: center center;
+            margin: 0 0 0 0.5em;
+        }
+    }
+}
+
+.header-nav-links {
+    float: left;
+    margin: 0;
+    @include media(em(600)) {
+        float: right;
+    }
+}
+
+.header-nav-link {
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    @include media(em(500)) {
+        float: left;
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        line-height: $header-nav-height;
+        padding: 0 0.5em;
+        margin: 0 0.5em;
+    }
+
+}

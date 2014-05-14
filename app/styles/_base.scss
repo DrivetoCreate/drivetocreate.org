@@ -1,0 +1,18 @@
+h1, h2, h3, h4, h5, h6 {
+    @include glegoo;
+}
+
+body, p {
+    @include openSans;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    padding: 0;
+}

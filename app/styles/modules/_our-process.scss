@@ -1,0 +1,22 @@
+.npa-content .our-process {
+    background-color: white;
+    color: $brown;
+    h1, h2, h4, h5, h6 {
+        color: $teal;
+    }
+    @include media(em(600)) {
+        background-color: transparent;
+    }
+}
+
+ul.our-process {
+    list-style: none;
+    li {
+        margin-bottom: 0.5em;
+        font-size: 1.2em;
+        margin-left: 3em;
+        i {
+            margin-left: -1.6em;
+        }
+    }
+}

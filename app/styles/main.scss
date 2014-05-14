@@ -1,8 +1,9 @@
-@import
-  "../bower_components/foundation/scss/normalize",
-  "custom-foundation",
-  "mixins",
-  "fonts",
-  "colors",
-  "layout",
-  "modules";
+@import "../bower_components/normalize-scss/normalize",
+        "../bower_components/bourbon/dist/bourbon",
+        "../bower_components/neat/app/assets/stylesheets/neat",
+        "fonts",
+        "base",
+        "mixins",
+        "colors",
+        "layouts/all-layouts",
+        "modules/all-modules";

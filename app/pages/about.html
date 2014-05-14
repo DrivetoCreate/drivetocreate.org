@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>About | Drive to Create</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link href='http://fonts.googleapis.com/css?family=Glegoo|Open+Sans:300,800' rel='stylesheet' type='text/css'>
+        <!-- build:css({.tmp,app}) /styles/main.css -->
+        <link rel="stylesheet" href="/styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js /scripts/vendor/modernizr.js -->
+        <script src="/bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+
+        <section class="full-width hp-header">
+            <div class="content">
+                <!-- htmlbuild:section topNav -->
+                <!-- /htmlbuild -->
+                <h1 class="page-header-text">Drive to Create provides creative and marketing assistance to charitable organizations in order to increase their societal impact.</h1>
+            </div>
+        </section>
+
+        <section class="full-width">
+            <div class="content">
+                <h2>Meet Our Key Players</h2>
+                <ul class="profiles"></ul>
+            </div>
+        </section>
+
+        <!-- htmlbuild:section footer -->
+        <!-- /htmlbuild -->
+
+        <!-- htmlbuild:section optional analytics -->
+        <!-- /htmlbuild -->
+
+        <!-- build:js /scripts/jquery.js -->
+        <script src="/bower_components/jquery/jquery.js"></script>
+        <!-- endbuild -->
+
+        <script src="/bower_components/handlebars/handlebars.min.js"></script>
+
+        <script type="text/javascript">
+            // Simple utility to highlight active page
+            $('li.nav-item').each(function (i, e) {
+                if ($(e).find('a').attr('href') === document.location.pathname.split('index.html')[0] ) {
+                    $(e).addClass('active');
+                }
+            });
+        </script>
+
+        <script type="text/x-handlebars-template" id="volunteer-profile-template">
+            <li class="volunteer-profile">
+                <img src="/images/people/{{img_url}}" alt="{{first_name}} {{last_name}}'s Profile Picture" class="volunteer-profile-picture" />
+                <div class="volunteer-profile-info">
+                    <h3 class="volunteer-name">{{first_name}} {{last_name}}</h3>
+                    <ul class="volunteer-social-icons inline-icons">
+                        {{#if instagram}}
+                        <li class="volunteer-social-icon"><a href="http://instagram.com/{{instagram}}" title="{{first_name}} on Instagram" class="volunteer-social-link"><i class="icon-instagram"></i></a></li>
+                        {{/if}}
+                        {{#if linkedin}}
+                        <li class="volunteer-social-icon"><a href="http://www.linkedin.com/in/{{linkedin}}/" title="{{first_name}} on LinkedIn" class="volunteer-social-link"><i class="icon-linkedin-circled"></i></a></li>
+                        {{/if}}
+                        {{#if twitter}}
+                        <li class="volunteer-social-icon"><a href="https://twitter.com/{{twitter}}" title="{{first_name}} on Twitter" class="volunteer-social-link"><i class="icon-twitter"></i></a></li>
+                        {{/if}}
+                    </ul>
+                    <h4 class="volunteer-title">{{title}}</h4>
+                    <p class="volunteer-profile-bio">{{{bio_html}}}</p>
+                    <ul class="volunteer-social-icons oneline-icons">
+                        {{#if instagram}}
+                        <li class="volunteer-social-icon"><a href="http://instagram.com/{{instagram}}" title="{{first_name}} on Instagram" class="volunteer-social-link"><i class="icon-instagram"></i></a></li>
+                        {{/if}}
+                        {{#if linkedin}}
+                        <li class="volunteer-social-icon"><a href="http://www.linkedin.com/in/{{linkedin}}/" title="{{first_name}} on LinkedIn" class="volunteer-social-link"><i class="icon-linkedin-circled"></i></a></li>
+                        {{/if}}
+                        {{#if twitter}}
+                        <li class="volunteer-social-icon"><a href="https://twitter.com/{{twitter}}" title="{{first_name}} on Twitter" class="volunteer-social-link"><i class="icon-twitter"></i></a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </li>
+        </script>
+
+        <script type="text/javascript" src="/data/volunteers.js"></script>
+
+        <script type="text/javascript">
+            var source = $('#volunteer-profile-template').html();
+            var template = Handlebars.compile(source);
+            $.each(volunteers, function() {
+                $('ul.profiles').append(template(this));
+            });
+        </script>
+
+</body>
+</html>
